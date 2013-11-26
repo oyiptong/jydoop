@@ -26,5 +26,5 @@ def setupjob(job, args):
 
 def map(key, value, timestamp, context):
     if not NOOP_PATTERN.search(value):
-        output = "[{0},{1}]".format(value,timestamp)
+        output = "[{0},{1}]".format(timestamp, value)
         context.write(timestamp,output)
